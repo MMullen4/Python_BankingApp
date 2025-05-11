@@ -15,7 +15,7 @@ def handle_deposit():
     account_choice = input("Enter 1 for checking,\n"
                            "enter 2 for savings,\n"
                            "enter q to quit: ")
-    if: account_choice == 'q':
+    if account_choice == 'q':
         return
 
     try:
@@ -34,7 +34,7 @@ def handle_deposit():
                 return
 
             # TODO: Add an if/else conditional statement to check the account choice,
-            if: account_choice == '1':
+            if account_choice == '1':
                 # TODO: Call the withdraw method on the appropriate account.
                 # TODO: Add a print statement to display the updated balance after the deposit
                 # TODO: Format the balance to two decimal places and thousands.
@@ -49,7 +49,7 @@ def handle_deposit():
         else:
             # TODO: Raise a ValueError with a message stating the user entered an invalid choice.
             raise ValueError("Invalid choice. Please enter 1, 2, or q.\n")
-            
+
     # If the user enters an invalid choice,
     # Print the ValueError message and call the handle_deposit function recursively.
     except ValueError as e:

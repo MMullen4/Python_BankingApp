@@ -28,7 +28,7 @@ def handle_transfer(checking, savings):
 
     try:
         # TODO: If the selection is in a list of valid choices, i.e ['1', '2']
-        if: account_choice in ['1', '2']:
+        if account_choice in ['1', '2']:
             try:
                 # TODO: Prompt the user to enter the amount to transfer and convert it to a float.
                 amount = float(input("How much would you like to transfer? "))
@@ -41,7 +41,7 @@ def handle_transfer(checking, savings):
 
             # TODO: Add an if/else conditional statement to check the account choice,
                 # TODO: Call the withdraw and deposit methods on the appropriate account.
-            if: account_choice == '1':
+            if account_choice == '1':
                 checking.withdraw(amount)
                 savings.deposit(amount)
             else:
