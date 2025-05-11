@@ -20,8 +20,7 @@ def handle_deposit(checking, savings):
         # If the selection is in a list of valid choices, i.e ['1', '2']
         if account_choice in ['1', '2']:
             try:
-                # Prompt the user to enter the amount to deposit and
-                #  convert it to a float.
+                # Prompt the user to enter the amount to deposit and convert it to a float.
                 amount = float(input("How much would you like to deposit? "))
             except ValueError:
                 # Print an error message if the user enters an invalid amount.
