@@ -1,8 +1,9 @@
 """The savings account class."""
 # TODO: Import the BankAccount class from the banking file.
+from BankingClasses.banking import BankAccount
 
 # TODO: Implement the SavingsAccount class, which inherits from the BankAccount class.
-class
+class SavingsAccount(BankAccount):
     """
     A class representing a savings account.
 
@@ -19,7 +20,10 @@ class
     # TODO: Define the constructor with a balance and overdraft_limit parameter.
     # TODO: Set the overdraft limit attribute to 100 by default.
     # TODO: Call the parent class constructor, BankAccount, to initialize the balance attribute.
-
+    def __init__(self, balance, overdraft_limit=100):
+        super().__init__(balance)
+        self.overdraft_limit = overdraft_limit
+        self.balance = balance
 
     # TODO: Implement the deposit method with an amount parameter.
         """
@@ -27,22 +31,25 @@ class
         Args:
         amount (float): The amount to be deposited.
         """
-        # TODO: Add the amount to the balance attribute.
-
+    def deposit(self, amount):
+        """ This method deposits the specified amount into the account. """
+        self.balance += amount
 
     # TODO: Implement the withdraw method with an amount parameter.
-        """
-        Withdraws the specified amount from the savings account.
+           def withdraw(self, amount):
+        """ This method withdraws the specified amount from the account.
         Args:
             amount (float): The amount to be withdrawn.
         Raises:
             ValueError: If the specified amount is greater than the current balance.
         """
-        if:
+        if amount <= self.balance + self.overdraft_limit:
         # TODO: Check if the amount is less than or equal to the sum of the balance and overdraft limit.
+            self.balance -= amount
         # TODO: If the condition is met, subtract the amount from the balance attribute.
         else:
-        # TODO: Otherwise, raise a ValueError with the message "Insufficient funds, overdraft limit reached".
+            raise ValueError("Insufficient funds, overdraft limit reached.\n")
+        # TODO: Otherwise, raise a ValueError with the overdraft message 
 
     def get_balance(self):
         """Returns the current balance of the savings account."""
