@@ -36,7 +36,7 @@ class SavingsAccount(BankAccount):
         self.balance += amount
 
     # TODO: Implement the withdraw method with an amount parameter.
-           def withdraw(self, amount):
+    def withdraw(self, amount):
         """ This method withdraws the specified amount from the account.
         Args:
             amount (float): The amount to be withdrawn.

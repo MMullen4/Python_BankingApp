@@ -23,7 +23,7 @@ def handle_transfer(checking, savings):
     account_choice = input("Enter 1 for checking,\n"
                            "enter 2 for savings,\n"
                            "enter q to quit: ")
-    if: account_choice == 'q':
+    if account_choice == 'q':
         return
 
     try:

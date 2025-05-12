@@ -41,15 +41,15 @@ class Validation:
         special_characters = "!@#$%^&*"
 
         for char in password:
-        # TODO: Use if/elif/else statements to check the character type.
-        # TODO: Set the corresponding variable to True if it fits the criteria.
-        if char.isupper():
+        # Use if/elif/else statements to check the character type.
+          if char.isupper():
+            # Set the corresponding variable to True if it fits the criteria.
             has_upper = True
-        elif char.islower():
+          elif char.islower():
             has_lower = True
-        elif char.isdigit():
+          elif char.isdigit():
             has_digit = True
-        elif char in special_characters:
+          elif char in special_characters:
             has_special = True
 
         # Return the boolean value based on the conditions.

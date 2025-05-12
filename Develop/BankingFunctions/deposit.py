@@ -1,7 +1,7 @@
 """This function handles the deposit process for the user."""
 
 # TODO: Pass in the checking account and savings account objects.
-def handle_deposit():
+def handle_deposit(checking, savings):
     """
     This function handles the deposit process for the user.
 
@@ -45,7 +45,7 @@ def handle_deposit():
                 # TODO: Add a print statement to display the updated balance after the deposit
                 # TODO: Format the balance to two decimal places and thousands.
                 savings.deposit(amount)
-                print(f"Here is your savings balance: ${savings.get_balance():, .2f}")
+                print(f"Here is your savings balance: ${savings.get_balance():,.2f}")
         else:
             # TODO: Raise a ValueError with a message stating the user entered an invalid choice.
             raise ValueError("Invalid choice. Please enter 1, 2, or q.\n")

@@ -43,11 +43,9 @@ class CheckingAccount(BankAccount):
         if amount <= self.balance + self.overdraft_limit:
             self.balance -= amount
         # TODO: If the condition is met, subtract the amount from the balance attribute.
-        else:
         # TODO: Otherwise, raise a ValueError with the message "Insufficient funds, overdraft limit reached".
         else:
             raise ValueError("Insufficient funds, overdraft limit reached.\n")
-        if:
 
     def get_balance(self):
         """Returns the current balance of the savings account."""

@@ -20,10 +20,9 @@ def handle_withdrawal(checking, savings):
     print("Which account would you like to make a withdrawal?")
     # TODO: Prompt the user to select an account to make a withdrawal.
     # TODO: If the user chooses to quit, return from the function.
-    selection = input("Enter 1 for Checking, 2 for Savings, or q to quit: ")
-    if: account_choice = input("Enter 1 for checking,\n"
-    "enter 2 for savings.\n" 
-    "enter q to quit: ")
+    account_choice = input("Enter 1 for checking,\n"
+                            "enter 2 for savings.\n" 
+                            "enter q to quit: ")
     if account_choice =='q':
        return
 
@@ -36,25 +35,25 @@ def handle_withdrawal(checking, savings):
 
             # Use the ValueError as an exception.
             except ValueError:
-                # TODO: Print an error message if the user enters an invalid amount.
+                # Print an error message if the user enters an invalid amount.
                 print("Invalid amount. Please enter a valid dollar amount.")
-                # TODO: Call the handle_withdrawal function recursively for an invalid amount.
+                # Call the handle_withdrawal function recursively for an invalid amount.
                 handle_withdrawal(checking, savings)
-                # TODO: Ensure the function returns after the recursive call.
+                # Ensure the function returns after the recursive call.
                 return
-            # TODO: Add an if/else conditional statement to check the account choice,
+            # Add an if/else conditional statement to check the account choice,
             if account_choice == '1':
                 checking.withdraw(amount)
-                # TODO: Call the withdraw method on the appropriate account.
-                # TODO: Add a print statement to display the updated balance after the deposit
-                # TODO: Format the balance to two decimal places and thousands.
+                # Call the withdraw method on the appropriate account.
+                # Add a print statement to display the updated balance after the deposit
+                # Format the balance to two decimal places and thousands.
                 print(f"Here is your checking balance: ${checking.get_balance():,.2f}")
             else:
-                # TODO: Call the deposit methods on the appropriate account.
-                # TODO: Add a print statement to display the updated balance after the deposit
-                # TODO: Format the balance to two decimal places and thousands.
+                # Call the deposit methods on the appropriate account.
+                # Add a print statement to display the updated balance after the deposit
+                # Format the balance to two decimal places and thousands.
                 savings.withdraw(amount)
-                print(f"Here is your savings balance: ${savings.get_balance():, .2f}")
+                print(f"Here is your savings balance: ${savings.get_balance():,.2f}")
         else:
             # TODO: Raise a ValueError with a message stating the user entered an invalid choice.
             raise ValueError("Invalid choice. Please enter 1, 2, or q.\n")
